@@ -1,0 +1,1 @@
+header{display:flex;justify-content:space-between;align-items:center}header .search-nav{display:flex}header li{display:inline-block;padding:5px 10px}header li.ativo{border-bottom:2px solid blue}

@@ -55,7 +55,6 @@ header {
 }
 
 .search {
-    position: relative;
     display:flex;
     align-items: center;
     margin-left:10px;
@@ -64,8 +63,8 @@ header {
 .form-search {
     position:absolute;        
     display:none;
-    right: -5px;
-    top:calc(100% + 10px);
+    right: 15px;
+    top:70px;
     padding: 5px 5px;
     border-radius: 5px;
     background:#C7BE90;

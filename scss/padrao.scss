@@ -21,7 +21,10 @@ body {
     background: #F4F0DC;
     color: #424037;
     font-family: 'Nunito', sans-serif;
-    overflow-x: hidden;
+}
+
+.ov-hidden {
+    overflow:hidden
 }
 
 .container {

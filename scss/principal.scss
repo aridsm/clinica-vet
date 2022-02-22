@@ -99,7 +99,8 @@ h1 {
 
 @media all and (max-width: 760px) {
     .principal .img {
-        width: 400px;
+        width:initial;
+        max-width: 400px;
     }
     .info-principal {
         margin-right: 0px;
@@ -117,4 +118,3 @@ h1 {
         margin: 10px auto
     }
 }
-

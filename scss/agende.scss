@@ -53,3 +53,9 @@
         margin:0 auto
     }
 }
+
+@media all and (max-width: 460px) {
+    .img-agende {
+        max-width:320px;
+    }
+}

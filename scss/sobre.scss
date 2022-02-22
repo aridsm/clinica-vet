@@ -45,7 +45,9 @@
     }
 
     .img-sobre {
-        width: 360px;
+        width: initial;
+        max-width: 360px;
         margin: 0 auto;
      }
 }
+

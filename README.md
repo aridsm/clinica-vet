@@ -1,6 +1,6 @@
 # Projeto clínica veterinária
 
-Redesign da landing page do meu antigo projeto [Clínica veterinária]().
+Redesign da landing page do meu antigo projeto [Clínica veterinária](https://aridsm.github.io/Clinica-veterinaria/).
 
 ## Conta com:
 
@@ -12,4 +12,4 @@ Redesign da landing page do meu antigo projeto [Clínica veterinária]().
 - Formulário para mensagens;
 - Horários de funcionamento.
 
-Link: https://aridsm.github.io/Vet---redesign/
+Link: https://aridsm.github.io/Vet-redesign/

@@ -12,4 +12,6 @@ Redesign da landing page do meu antigo projeto [Clínica veterinária](https://a
 - Formulário para mensagens;
 - Horários de funcionamento.
 
+![página](https://github.com/aridsm/Vet-redesign/blob/main/page.png)
+
 Link: https://aridsm.github.io/Vet-redesign/

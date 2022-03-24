@@ -1,4 +1,4 @@
-# Projeto clínica veterinária
+# Projeto clínica veterinária 🐶
 
 Design de landing page de uma clínica veterinária fictícia. 
 

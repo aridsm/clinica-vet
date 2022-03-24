@@ -5,7 +5,7 @@ Design de landing page de uma clínica veterinária fictícia.
 ## Conta com:
 
 - Seção de especialidades;
-- Áreas de agendamento de visitas e resultados de exames;
+- Botões de agendamento de visitas e resultados de exames;
 - Seção de exames;
 - Seção sobre a clínica;
 - Formulário para mensagens;

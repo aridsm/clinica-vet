@@ -11,6 +11,6 @@ Design de landing page de uma clínica veterinária fictícia.
 - Formulário para mensagens;
 - Horários de funcionamento.
 
-Link: https://aridsm.github.io/Vet-redesign/
+Link: https://aridsm.github.io/clinica-vet/
 
 ![página](https://github.com/aridsm/Vet-redesign/blob/main/page.png)

@@ -1,0 +1,47 @@
+footer {
+  margin-left: 4rem;
+  background: $cor-4;
+  color: $cor-2;
+  padding: 2rem 0;
+  font-size: .9rem;
+
+  .footer__infos {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 2rem;
+    justify-items: center;
+  }
+
+  .footer__titulos {
+    font-weight: 600;
+    margin-bottom: .5rem;
+  }
+
+  .footer__menu ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: .5rem 2rem;
+  }
+
+  .footer__address-item+.footer__address-item {
+    margin-top: 2rem;
+  }
+
+  .footer__vet {
+    text-align: right;
+
+    .titulo {
+      margin-bottom: 1rem;
+      display: block;
+      font-weight: 600;
+      line-height: 2.25rem;
+    }
+  }
+
+  .footer__made-by {
+    padding-top: 3rem;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+  }
+}

@@ -1,0 +1,48 @@
+#exames {
+  background: $cor-3;
+  position: relative;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .exames__header {
+    text-align: right;
+  }
+
+  .exames__lista {
+    order: -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: .5rem;
+
+    li a {
+      padding: 1.5rem 2rem;
+      border-radius: .2rem;
+      width: 100%;
+      text-align: center;
+      background: $cor-4;
+      color: $cor-2;
+      @include shadow((2px 2px 6px 0 $cor-4-tp));
+      transition: .1s;
+
+      &:hover {
+        transform: scale(1.15);
+        @include shadow((2px 2px 10px 0 black));
+
+      }
+    }
+  }
+
+  .exames__enfeite {
+    background-image: url('../assets/linhas.svg');
+    width: 18rem;
+    height: 18rem;
+    position: absolute;
+    transform: rotate(90deg);
+    top: -9rem;
+    left: -9rem
+  }
+}

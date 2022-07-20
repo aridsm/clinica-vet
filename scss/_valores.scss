@@ -1,0 +1,50 @@
+#valores {
+  background: $cor-4;
+  padding: 3rem 0;
+  color: $cor-1;
+
+  .container {
+    max-width: 1080px;
+  }
+
+  .valores__lista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    li {
+      display: flex;
+
+      +li {
+        margin-left: 2rem;
+      }
+
+      &::before {
+        content: '';
+        background: $cor-1;
+        min-width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: block;
+        margin-right: 1rem;
+        background-size: 2rem !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+      }
+
+      &:nth-of-type(odd)::before {
+        background: $cor-3;
+      }
+
+      $i: 1;
+
+      @while $i < 5 {
+        &:nth-of-type(#{$i})::before {
+          background-image: url('../assets/icon-ca-#{$i}.png');
+        }
+
+        $i: $i + 1
+      }
+    }
+  }
+}

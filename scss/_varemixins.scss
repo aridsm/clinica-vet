@@ -1,0 +1,37 @@
+$cor-1: #FCFAF0;
+$cor-2: #F3F0DD;
+$cor-3: #E1CA53;
+$cor-4: #232018;
+$cor-4-tp: #2320182b;
+$cor-4-shadow: rgba(35, 32, 24, 0.06);
+
+/*
+@mixin mediaQuery($size) {
+  @if $size ==
+}*/
+
+
+@mixin shadow($shadow...) {
+  box-shadow: $shadow;
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+}
+
+@mixin radGradient($grad) {
+  background: radial-gradient($grad);
+  background: -moz-radial-gradient($grad);
+  background: -o-radial-gradient($grad);
+  background: -webkit-radial-gradient($grad);
+}
+
+@mixin detailYellow($width) {
+  content: '';
+  width: $width;
+  background: $cor-3;
+  height: 1rem;
+  display: block;
+  position: absolute;
+  right: -.5rem;
+  bottom: .2rem;
+  z-index: -1;
+}

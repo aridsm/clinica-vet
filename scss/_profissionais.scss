@@ -1,0 +1,76 @@
+#profissionais {
+  text-align: center;
+  background-image: url(../assets/blob-1.svg), url(../assets/linhas.svg);
+  background-repeat: no-repeat;
+  background-size: 20rem;
+  background-position: -10rem -10rem, calc(100% + 10rem) calc(100% + 10rem);
+  padding-bottom: 8rem;
+
+  h2 {
+    position: relative;
+    display: inline-block;
+
+    &::before {
+      @include detailYellow(8rem)
+    }
+  }
+
+  .profissionais__lista {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6rem;
+
+    .profissionais__infos {
+      margin-top: 1rem;
+
+      .profissionais__nome {
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+    }
+
+    .profissionais__img {
+      width: 160px;
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
+      mask-position: center;
+      -webkit-mask-position: center;
+      mask-size: 158px;
+      -webkit-mask-size: 158px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+      }
+    }
+
+    li {
+      padding: 1.2rem .5rem;
+      border: 1px solid $cor-4-tp;
+      border-radius: .2rem;
+      text-align: center;
+      @include shadow((2px 2px 6px 0 $cor-4-shadow));
+      transition: .1s;
+      $i: 1;
+
+      @while $i < 5 {
+        &:nth-of-type(#{$i}) .profissionais__img {
+          mask-image: url(../assets/pro-bg-#{$i}.svg);
+          -webkit-mask-image: url(../assets/pro-bg-#{$i}.svg);
+        }
+
+        $i: $i + 1
+      }
+
+      +li {
+        margin-left: 1.5rem;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

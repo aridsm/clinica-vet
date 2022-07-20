@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,210 +8,307 @@
     <title>Vet | Página inicial</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <div class="ov-hidden">
-    <div class="header">
-    <header>
-        <span class="logo">Vet</span>
-        <div class="search-nav">
-        <nav class="nav-menu">
+    <header id="header">
+        <button type="menu" aria-label="abrir menu" class="header__btn-menu"><img src="./assets/icon-menu.svg" alt=""></button>
+        <nav class="header__nav">
             <ul>
-                <li><a href="#" class="ativo">Home</a></li>
-                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">Consultas</a></li>
                 <li><a href="#">Exames</a></li>
+                <li><a href="#">Resultados</a></li>
+                <li><a href="#">Agendar</a></li>
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
         </nav>
-        <button class="menu-mobile"><i class="fas fa-bars"></i></button>
-        <div class="search">
-            <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
-            <form action="" class="form-search">
-                <label for="search">search</label>
-               <input type="search" name="search" id="search" placeholder="O que você procura?">
-               <input type="submit" value="Procurar" class="btn-padrao btn-amarelo"> 
-            </form>
-            
-        </div>            
-    </div>
+        <address class="header__redes-sociais">
+            <a href="#"><img src="./assets/icon-instagram.svg" alt="Instagram"></a>
+            <a href="#"><img src="./assets/icon-facebook.svg" alt="Facebook"></a>
+            <a href="#"><img src="./assets/icon-youtube.svg" alt="Youtube"></a>
+        </address>
     </header>
-    </div>
-
-    <section class="principal">
-        <div class="info-principal">
-            <div class="horario">
-                <span class="aberto"></span>
-                <div class="funcionamento">
-                <p>Segunda a sexta - 8h:00 às 21h:00</p>
-                <p>Sábado e domingo - 8h:00 às 16h:00</p>
+    <main>
+        <section aria-label="entrada" id="entrada">
+            <div class="entrada__container">
+                <span class="titulo">Vet</span>
+                <div class="entrada__textos">
+                    <h1 class="titulo">Curabitur feugiat<br> mi vitae <span>eleifend</span> <br> pharetra.</h1>
+                    <p class="entrada__paragrafo">Mauris justo urna, maximus quis eros<br> vel, blandit pellentesque purus</p>
+                    <div class="entrada__btns">
+                        <a href="#" class="btns btn-border">
+                            <div class="bg-hover"></div>
+                            <p>Resultados</p>
+                        </a>
+                        <a href="#" class="btns btn-fill">
+                            <div class="bg-hover"></div>
+                            <p>Agende uma visita</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="entrada__img"><img src="./assets/img-entrada.png" alt="gato amarelo listrado"></div>
+                <address aria-label="endereço" class="entrada__endereco">
+                    <span>Rua Lorem 123 - Ipsum</span>
+                    <span>Cidade - XX</span>
+                </address>
+                <div aria-label="horario de funcionamento" class="entrada__funcionamento">
+                    <p class="entrada__aberto-fechado">Aberto agora</p>
+                    <div>
+                        <p>Segunda a sexta</p>
+                        <p><time datetime="08:00">8h:00</time> às <time datetime="21:00">21h:00</time></p>
+                    </div>
+                    <div>
+                        <p>Sabado e domingo</p>
+                        <p><time datetime="08:00">8h:00</time> às <time datetime="16:00">16h:00</time></p>
+                    </div>
                 </div>
             </div>
-
-            <h1>Curabitur feugiat mi vitae eleifend pharetra.
-            </h1>
-
-            <div class="btns-principal">
-                <a href="" class="agendar btn-padrao btn-amarelo">Agendar consulta</a>
-                <a href="" class="resultados btn-padrao btn-verde">Resultados dos exames</a>
-            </div> 
-        </div>
-
-        <div class="img">
-            <img src="img/img-principal.jpg" alt="gato">
-        </div>
-    </section>
-
-    <section class="especialidades">
-        <div class="container">
-        <h2>Especialidades</h2>
-        <div class="es-container">
-            <a href="" class="ex-es-item">Endocrinologia</a>
-            <a href="" class="ex-es-item">Cardiologia</a>
-            <a href="" class="ex-es-item">Dermatologia</a>
-            <a href="" class="ex-es-item">Acupuntura</a>
-            <a href="" class="ex-es-item">Odontologia</a>
-            <a href="" class="ex-es-item">Ortopedia</a>
-            <a href="" class="ex-es-item">Oncologia</a>
-            <a href="" class="ex-es-item">Fisioterapia</a>
-            <a href="" class="ex-es-item">Nefrologia</a>
-            <a href="" class="ex-es-item">Nutrição</a>
-            <a href="" class="ex-es-item">Clinica geral</a>
-        </div></div>
-    </section>
-
-    <section class="agende">
-        <div class="container">
-            <div class="col-1-agende">
-                <h2>Agende sua visita</h2>
-                <p>Consultas a partir de <span>r$ <span>100</span>,00</span></p>
-                <p>E a primeira é grátis!</p>
-                <a href="" class="btn-padrao btn-verde">Agendar consulta</a>
+        </section>
+        <section aria-label="valores" id="valores">
+            <div class="container">
+                <ul class="valores__lista">
+                    <li>Etiam sed tristique massa</li>
+                    <li>Nulla convallis nisi tellus, cursus mattis</li>
+                    <li>Suspendisse aliquam ipsum eget nisi</li>
+                    <li>Pellentesque id dignissim lorem</li>
+                </ul>
             </div>
-            <div class="img-agende">
-                <img src="img/agende-img.jpg" alt="cachorro consulta">
+        </section>
+        <section aria-label="especialidades médicas" id="especialidades" class="padding-section">
+            <div class="container">
+                <header>
+                    <h2 class="titulo especialidades__titulo">Especialidades</h2>
+                    <p class="padding-txt">Donec viverra mauris quis<br> elementum laoreet</p>
+                    <a href="#" class="btns btn-fill">
+                        <div class="bg-hover"></div>
+                        <p>Agende uma visita</p>
+                    </a>
+                </header>
+                <ul class="especialidades__lista">
+                    <li><a href="#">Clinica Geral</a></li>
+                    <li><a href="#">Nefrologia</a></li>
+                    <li><a href="#">Nutriçao</a></li>
+                    <li><a href="#">Endocrinologia</a></li>
+                    <li><a href="#">Dermatologia</a></li>
+                    <li><a href="#">Oncologia</a></li>
+                    <li><a href="#">Cardiologia</a></li>
+                    <li><a href="#">Neurologia</a></li>
+                    <li><a href="#">Acupuntura</a></li>
+                    <li><a href="#">Fisioterapia</a></li>
+                    <li><a href="#">Odontologia</a></li>
+                </ul>
             </div>
-        </div>
-    </section>
+        </section>
+        <section aria-label="exames disponiveis" id="exames" class="padding-section">
+            <div class="container">
+                <header class="exames__header">
+                    <h2 class="titulo">Exames</h2>
+                    <p class="padding-txt">Donec viverra mauris quis<br> elementum laoreet</p>
+                    <a href="#" class="btns btn-border">
+                        <div class="bg-hover"></div>
+                        <p>Marque seu exame</p>
+                    </a>
+                </header>
+                <ul class="exames__lista">
+                    <li><a href="">Exame de sangue</a></li>
+                    <li><a href="">Exame de urina</a></li>
+                    <li><a href="">Ecocardiograma</a></li>
+                    <li><a href="">Ultrassonografia</a></li>
+                    <li><a href="">Radiografia</a></li>
+                    <li><a href="">Pressao arterial</a></li>
+                </ul>
+            </div>
+            <div class="exames__enfeite"></div>
+        </section>
+        <section aria-label="nossos profissionais" id="profissionais" class="padding-section">
+            <div class="container">
+                <header>
+                    <h2 class="titulo">Conheça nossos profissionais</h2>
+                    <p class="padding-txt">Mauris dignissim rhoncus erat</p>
+                </header>
+                <ul class="profissionais__lista">
+                    <li>
+                        <a href="#">
+                            <div class="profissionais__img">
+                                <img src="./assets/pro-1.webp" alt="Victor">
+                            </div>
+                            <div class="profissionais__infos">
+                                <p class="profissionais__nome">Victor</p>
+                                <p>Veterinario</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="profissionais__img">
+                                <img src="./assets/pro-2.webp" alt="Tais">
+                            </div>
+                            <div class="profissionais__infos">
+                                <p class="profissionais__nome">Tais</p>
+                                <p>Veterinaria</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="profissionais__img">
+                                <img src="./assets/pro-3.webp" alt="Bruno">
+                            </div>
+                            <div class="profissionais__infos">
+                                <p class="profissionais__nome">Bruno</p>
+                                <p>Veterinario</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="profissionais__img">
+                                <img src="./assets/pro-4.webp" alt="Amanda">
+                            </div>
+                            <div class="profissionais__infos">
+                                <p class="profissionais__nome">Amanda</p>
+                                <p>Enfermeira</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-    <section class="exames">
-        <div class="container">
-            <h2>Exames</h2>
-            <div class="ex-container">
-                <a href="" class="ex-es-item">Exame de urina</a>
-                <a href="" class="ex-es-item">Exame de sangue</a>
-                <a href="" class="ex-es-item">Ultrassonografia</a>
-                <a href="" class="ex-es-item">Ecocardiograma</a>
-                <a href="" class="ex-es-item">Pressão arterial</a>
-                <a href="" class="ex-es-item">Radiografia</a>
+        </section>
+        <section aria-label="sobre o Vet" id="sobre">
+            <div class="container">
+                <div class="sobre__txts padding-section">
+                    <h2 class="titulo">Sobre o Vet</h2>
+                    <p>Nunc blandit nisl sit amet nibh fermentum interdum. Ut sagittis feugiat dignissim. Proin tellus nisi, gravida vehicula sapien a, cursus auctor lorem. Integer mattis urna sem, eu congue est sagittis.
+                    </p>
+                </div>
+                <div class="sobre__img">
+                    <img src="./assets/img-sobre.png" alt="gato branco e preto bocejando">
+                </div>
             </div>
-        </div>
-    </section>
-
-    <section class="sobre">
-        <div class="container">
-            <div class="img-sobre">
-                <img src="img/img-sobre.jpg" alt="clínica">
+        </section>
+        <section aria-label="tire sua duvida" id="duvidas" class="padding-section">
+            <div class="container">
+                <header>
+                    <h2 class="titulo">Possui alguma dúvida?</h2>
+                    <p class="padding-txt">Entre em contato com a gente!</p>
+                </header>
+                <div class="duvidas__container">
+                    <form action="#" class="duvidas__form">
+                        <div class="duvidas__campo-form">
+                            <label for="nome" class="duvidas__label">Seu nome</label>
+                            <input type="text" name="nome" id="nome" placeholder="Ana">
+                        </div>
+                        <div class="duvidas__campo-form">
+                            <label for="email" class="duvidas__label">Seu email</label>
+                            <input type="email" name="email" id="email" placeholder="ana@email.com">
+                        </div>
+                        <div class="duvidas__campo-form">
+                            <label for="assunto" class="duvidas__label">Assunto da mensagem</label>
+                            <input type="text" name="assunto" id="assunto" placeholder="Sobre uma coisa...">
+                        </div>
+                        <div class="duvidas__campo-form">
+                            <label for="mensagem" class="duvidas__label">Mensagem</label>
+                            <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Ola. Gostaria de saber mais sobre..."></textarea>
+                        </div>
+                        <button type="submit" class="btns btn-fill">
+                            <div class="bg-hover"></div>
+                            <p>Enviar mensagem</p>
+                        </button>
+                    </form>
+                    <address>
+                        <div class="duvidas__campo-contato">
+                            <p class="duvidas__label">Endereço</p>
+                            <div>
+                                Rua Lorem, 123 <br>
+                                Ipsum <br>
+                                12345-678, Lorem - IP <br>
+                            </div>
+                        </div>
+                        <div class="duvidas__campo-contato">
+                            <p class="duvidas__label">Telefone</p>
+                            <div>
+                                +55 (00) 1234-5678
+                            </div>
+                        </div>
+                        <div class="duvidas__campo-contato">
+                            <p class="duvidas__label">Email para contato</p>
+                            <div>
+                                vets@email.com
+                            </div>
+                        </div>
+                        <div class="duvidas__campo-contato">
+                            <p class="duvidas__label">Siga-nos</p>
+                            <div>
+                                Rua Lorem, 123 <br>
+                                Ipsum <br>
+                                12345-678, Lorem - IP <br>
+                            </div>
+                        </div>
+                    </address>
+                </div>
             </div>
-            <div class="col-2-sobre">
-                <h2>Sobre o Vet</h2>
-                <p>Nunc blandit nisl sit amet nibh fermentum interdum. Ut sagittis feugiat dignissim. Proin tellus nisi, gravida vehicula sapien a, cursus auctor lorem. Integer mattis urna sem, eu congue est sagittis.</p>
-                <p>Proin tellus nisi, gravida vehicula sapien a, cursus auctor lorem. Integer mattis urna sem, eu congue est sagittis nec. </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="contato">
-        <div class="container">                
-            <h2>Possui alguma dúvida?</h2>
-            <div class="contato-container">
-                <form action="">
-                    <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome" placeholder="Nome completo" required>
-                    <label for="email">email</label>
-                    <input type="text" name="email" id="email" placeholder="Seu email" required>
-                    <label for="assunto">assunto</label>
-                    <input type="text" name="assunto" id="assunto" placeholder="Assunto">
-                    <label for="mensagem">mensagem</label>
-                    <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Mensagem" required></textarea>
-                    <button type="submit" class="btn-padrao btn-amarelo">Enviar</button>
-                </form>
-            
-            <div class="contato-dados">
-                <span class="endereco">
-                    <p>Rua Lorem, 123</p>
-                    <p>Ipsum</p>
-                    <p>12345-678, Lorem - IP</p>
-                </span>
-                <span class="telefone">+55 (00) 1234-5678</span>
-                <span class="email">vets@email.com</span>
-                <span class="redes-sociais">
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-youtube"></i></a>
-                </span>
-            </div>
-        </div>
-        </div>
-    </section>
-
+        </section>
+    </main>
     <footer>
         <div class="container">
-        <div class="col-1-footer">
-            <p class="logo">Vet</p>
-            <span class="redes-sociais">
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-youtube"></i></a>
-            </span>  
-        </div>     
-
-        <div class="contato-dados">
-            <span class="endereco">
-                <p>Rua Lorem, 123</p>
-                <p>Ipsum</p>
-                <p>12345-678, Lorem - IP</p>
-            </span>
-            <span class="telefone">+55 (00) 1234-5678</span>
-            <span class="email">vets@email.com</span>
+            <div class="footer__infos">
+                <nav class="footer__menu">
+                    <p class="footer__titulos">Menu</p>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Consultas</a></li>
+                        <li><a href="#">Exames</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Resultados</a></li>
+                        <li><a href="#">Agendar consulta</a></li>
+                        <li><a href="#">Agendar exame</a></li>
+                    </ul>
+                </nav>
+                <address>
+                    <div class="footer__address-item">
+                        <p class="footer__titulos">Endereço</p>
+                        <div>
+                            Rua Lorem, 123 <br>
+                            Ipsum <br>
+                            12345-678, Lorem - IP <br>
+                        </div>
+                    </div>
+                    <div class="footer__address-item">
+                        <p class="footer__titulos">Telefone</p>
+                        <div>
+                            +55 (00) 1234-5678
+                        </div>
+                    </div>
+                </address>
+                <address>
+                    <div class="footer__address-item">
+                        <p class="footer__titulos">Email</p>
+                        <div>
+                            vets@email.com
+                        </div>
+                    </div>
+                    <div class="footer__address-item">
+                        <p class="footer__titulos">Siga-nos</p>
+                        <div>
+                            1 2 3
+                        </div>
+                    </div>
+                </address>
+                <div class="footer__vet">
+                    <span class="titulo">Vet</span>
+                    <p>Donec quis mi justo. <br> Proin id eros varius, <br> fermentum dolor</p>
+                </div>
+            </div>
+            <span class="footer__made-by">Projeto feito por <a href="#">Ariane Morelato</a></span>
         </div>
-        <nav class="nav-footer">
-            <div class="nav-item"><a href="">Home</a></div>
-            <div class="nav-item"><a href="">Serviços</a></div>
-            <div class="nav-item"><a href="">Sobre</a></div>
-            <div class="nav-item"><a href="">Contato</a></div>
-            <div class="nav-item"><a href="">Consultas</a>
-                <span class="nav-item"><a href="">Agendar consulta</a></span>
-                <span class="nav-item"><a href="">Endocrinologia</a></span>
-                <span class="nav-item"><a href="">Cardiologia</a></span>
-                <span class="nav-item"><a href="">Dermatologia</a></span>
-                <span class="nav-item"><a href="">Acupuntura</a></span>
-                <span class="nav-item"><a href="">Odontologia</a></span>
-                <span class="nav-item"><a href="">Ortopedia</a></span>
-                <span class="nav-item"><a href="">Oncologia</a></span>
-                <span class="nav-item"><a href="">Fisioterapia</a></span>
-                <span class="nav-item"><a href="">Nefrologia</a></span>
-                <span class="nav-item"><a href="">Nutrição</a></span>
-                <span class="nav-item"><a href="">Clínica geral</a></span>
-            </div>
-            <div class="nav-item"><a href="">Exames</a>
-                <span class="nav-item"><a href="">Resultados de exames</a></span>
-                <span class="nav-item"><a href="">Exame de urina</a></span>
-                <span class="nav-item"><a href="">Exame de sangue</a></span>
-                <span class="nav-item"><a href="">Ultrassonografia</a></span>
-                <span class="nav-item"><a href="">Ecocardiograma</a></span>
-                <span class="nav-item"><a href="">Pressão arterial</a></span>
-                <span class="nav-item"><a href="">Radiografia</a></span>
-            </div>
-        </nav>     
-    </div>
-    <div class="made-by">By <a href="https://github.com/aridsm">Ariane Morelato</a></div>
     </footer>
-</div>
     <script src="script.js"></script>
 </body>
+
 </html>

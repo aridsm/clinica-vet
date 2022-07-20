@@ -1,0 +1,111 @@
+.container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem
+}
+
+.titulo {
+  font-size: 2.25rem;
+}
+
+body {
+  font-family: 'Lora', serif;
+  background: $cor-1;
+  font-size: 15px;
+  color: $cor-4
+}
+
+main {
+  margin-left: 4rem;
+}
+
+.padding-section {
+  padding: 5.5rem 0
+}
+
+.padding-txt {
+  margin: 1rem 0 3rem 0;
+}
+
+.btns {
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  font-weight: 600;
+  overflow: hidden;
+  border-radius: .2rem;
+
+  p {
+    @include shadow((0 0 0 2px $cor-4 inset));
+    width: 100%;
+    height: 100%;
+    border-radius: .2rem;
+    padding: .9rem 1.6rem;
+    overflow: hidden;
+  }
+
+  &:hover .bg-hover {
+    width: 100%;
+  }
+}
+
+.bg-hover {
+  display: block;
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  transition: .6s;
+}
+
+.btn-fill {
+  background: $cor-4;
+  color: $cor-2;
+  border-bottom-right-radius: 1.6rem;
+
+  p {
+    border-bottom-right-radius: 1.6rem;
+  }
+
+  .bg-hover {
+    background: $cor-3;
+    left: 0
+  }
+
+  &:hover {
+    color: $cor-4;
+  }
+}
+
+.btn-border {
+  background: transparent;
+  border-top-left-radius: 1.6rem;
+  color: $cor-4;
+
+  p {
+    border-top-left-radius: 1.6rem;
+  }
+
+  .bg-hover {
+    background: $cor-4;
+    right: 0
+  }
+
+  &:hover {
+    color: $cor-2;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $cor-1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $cor-4;
+}

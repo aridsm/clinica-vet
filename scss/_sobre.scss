@@ -1,0 +1,32 @@
+#sobre {
+  background: $cor-4;
+  color: $cor-2;
+  position: relative;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sobre__txts p {
+    margin-top: 1rem;
+    max-width: 20rem;
+    line-height: 150%;
+  }
+
+  .sobre__img {
+    position: relative;
+    flex: 1;
+    background: url(../assets/blob-2.svg), url(../assets/blob-2.svg), url(../assets/blob-1.svg);
+    background-repeat: no-repeat;
+    background-position: center, 6% 20%, 92% 60%;
+    background-size: 20rem, 4rem, 4rem;
+
+    img {
+      height: 28rem;
+      width: auto;
+      margin: -5.5rem auto 0 auto
+    }
+  }
+}

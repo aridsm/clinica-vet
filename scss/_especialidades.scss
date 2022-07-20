@@ -1,0 +1,42 @@
+#especialidades {
+  background-image: url('../assets/blob-2.svg');
+  background-repeat: no-repeat;
+  background-size: 20rem;
+  background-position: calc(100% + 8rem) -10rem;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .especialidades__titulo {
+    position: relative;
+
+    &::before {
+      @include detailYellow(6rem)
+    }
+  }
+
+  .especialidades__lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: .5rem;
+
+    li a {
+      transition: .1s;
+      padding: 1.2rem 2rem;
+      border: 1px solid $cor-4-tp;
+      border-radius: .2rem;
+      width: 100%;
+      text-align: center;
+      @include shadow((2px 2px 6px 0 $cor-4-shadow));
+      background: $cor-1;
+
+      &:hover {
+        transform: scale(1.15);
+        background: $cor-2;
+      }
+    }
+  }
+}

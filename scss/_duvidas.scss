@@ -1,0 +1,79 @@
+#duvidas {
+  background: url(../assets/blob-1.svg), url(../assets/blob-2.svg);
+  background-repeat: no-repeat;
+  background-size: 22rem;
+  background-position: -10rem -10rem, calc(100% + 10rem) calc(100% + 10rem);
+
+  header {
+    text-align: center;
+
+    .titulo {
+      position: relative;
+      display: inline-block;
+
+      &::before {
+        @include detailYellow(6rem)
+      }
+    }
+  }
+
+  .duvidas__container {
+    display: flex;
+    margin-top: 6rem;
+  }
+
+  .duvidas__form {
+    display: inline-block;
+    width: 50%;
+    margin-right: 3rem;
+
+    .duvidas__campo-form {
+      position: relative;
+      margin-bottom: 2rem;
+
+      label {
+        position: absolute;
+        top: -.7rem;
+        left: .5rem;
+        padding: 0 .6rem;
+        background: $cor-1;
+      }
+
+      input,
+      textarea {
+        padding: .7rem 1rem;
+        width: 100%;
+        border: 1px solid $cor-4-tp;
+        border-radius: .2rem;
+        background: transparent;
+        @include shadow((2px 2px 6px 0 $cor-4-shadow));
+
+        &:focus {
+          @include shadow((0 0 0 2px $cor-4));
+        }
+
+        &:hover {
+          border: 1px solid $cor-4;
+
+        }
+      }
+
+    }
+  }
+
+  .duvidas__label {
+    font-size: 0.8rem;
+    font-weight: bold;
+    height: 1rem;
+  }
+
+  .duvidas__campo-contato {
+    .duvidas__label {
+      margin-bottom: .5rem;
+    }
+
+    +div {
+      margin-top: 2rem;
+    }
+  }
+}

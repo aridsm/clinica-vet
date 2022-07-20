@@ -1,0 +1,37 @@
+#header {
+  background: $cor-3;
+  position: fixed;
+  width: 4rem;
+  min-height: 100vh;
+  @include shadow(1px 0 15px 0 $cor-4-tp);
+  padding: 2rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+
+  .header__btn-menu {
+    width: 100%;
+    display: grid;
+    place-items: center;
+
+    img {
+      width: .5rem;
+    }
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__redes-sociais {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 1rem;
+
+    a {
+      width: 1.5rem
+    }
+  }
+}

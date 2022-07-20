@@ -1,0 +1,139 @@
+#entrada {
+  position: relative;
+  @include radGradient((100% 100% at 50% 0%, $cor-1 0%, $cor-2 100%));
+  background: url('../assets/blob-1.svg'), url('../assets/blob-2.svg'), url('../assets/linhas.svg'), url('../assets/linhas.svg');
+  background-repeat: no-repeat;
+  background-position: 22% -5%, 110%, 110% -45%, 27% 165%;
+  background-size: auto;
+
+  .entrada__container {
+    @extend .container;
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
+    max-width: 1080px;
+    min-height: 100vh;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto minmax(400px, 650px) auto;
+    grid-gap: 1.5rem;
+  }
+
+  .entrada__textos {
+    grid-column: 1;
+
+    h1 {
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 6rem;
+        height: 6rem;
+        background: url('../assets/blob-2.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        top: -1.5rem;
+        left: -1.5rem;
+        z-index: -1;
+      }
+
+      span {
+        position: relative;
+
+        &::before {
+          @include detailYellow(8rem)
+        }
+      }
+    }
+
+    .entrada__paragrafo {
+      margin: 1.5rem 0 3rem 0;
+    }
+
+    .entrada__btns {
+      display: flex;
+
+      a+a {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .entrada__img {
+    display: inline-block;
+    position: relative;
+    grid-column: 2;
+
+    img {
+      width: 120%;
+      position: absolute;
+      bottom: -1rem;
+      right: -5rem
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -3rem;
+      background-image: url('../assets/img-fundo-entrada.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 120%;
+      height: 140%;
+    }
+  }
+
+  .entrada__endereco {
+    position: absolute;
+    left: 35%;
+    width: 13rem;
+    text-align: right;
+    display: grid;
+    grid-template-columns: auto auto;
+
+    span {
+      display: block;
+      grid-column: 1;
+    }
+
+    &::before {
+      content: url('../assets/icon-localizacao.svg');
+      grid-column: 2;
+      grid-row: 1 / 3;
+      text-align: center;
+      margin: auto;
+      margin-left: .8rem;
+    }
+  }
+
+  .entrada__funcionamento {
+    grid-column: 3;
+    text-align: right;
+    align-self: end;
+    margin-bottom: 3rem;
+
+
+    div+div {
+      margin-top: .5rem;
+    }
+
+    .entrada__aberto-fechado {
+      font-weight: 600;
+      margin-bottom: .5rem;
+
+      &::before {
+        content: '';
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: lime;
+        display: inline-block;
+        position: relative;
+        top: -2px;
+        left: -5px
+      }
+    }
+  }
+}

@@ -1,16 +1,12 @@
-@import "padrao.scss";
-@import "header.scss";
-@import "principal.scss";
-@import "especialidades.scss";
-@import "agende.scss";
-@import "exames.scss";
-@import "sobre.scss";
-@import "contato.scss";
-@import "footer.scss";
-
-
-
-
-
-
-
+@import "varemixins.scss";
+@import "normalizar.scss";
+@import "_global.scss";
+@import "_header.scss";
+@import "_entrada.scss";
+@import "_valores.scss";
+@import "_especialidades.scss";
+@import "_exames.scss";
+@import "_profissionais.scss";
+@import "_sobre.scss";
+@import "_duvidas.scss";
+@import "_footer.scss";

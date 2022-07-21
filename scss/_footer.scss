@@ -5,11 +5,20 @@ footer {
   padding: 2rem 0;
   font-size: .9rem;
 
+  @include mediaQuery(l) {
+    margin-left: 0;
+  }
+
   .footer__infos {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 2rem;
     justify-items: center;
+
+    @include mediaQuery(m) {
+      grid-template-columns: auto;
+      text-align: center;
+    }
   }
 
   .footer__titulos {
@@ -21,6 +30,10 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: .5rem 2rem;
+
+    @include mediaQuery(m) {
+      grid-template-columns: auto;
+    }
   }
 
   .footer__address-item+.footer__address-item {
@@ -36,6 +49,10 @@ footer {
       font-weight: 600;
       line-height: 2.25rem;
     }
+
+    @include mediaQuery(m) {
+      text-align: center;
+    }
   }
 
   .footer__made-by {
@@ -43,5 +60,27 @@ footer {
     font-weight: 600;
     text-align: center;
     display: block;
+
+    @include mediaQuery(m) {
+      padding-top: 4rem;
+
+    }
+  }
+
+  .footer__redes-sociais {
+    display: flex;
+    align-items: center;
+
+    li+li {
+      margin-left: .5rem;
+    }
+
+    a {
+      width: 1.5rem
+    }
+
+    @include mediaQuery(m) {
+      justify-content: center;
+    }
   }
 }

@@ -8,6 +8,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mediaQuery(s) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .especialidades__header {
+    margin-right: 2rem;
+
+    @include mediaQuery(xm) {
+      margin-right: 0;
+      margin-bottom: 3rem;
+    }
   }
 
   .especialidades__titulo {
@@ -22,6 +36,17 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: .5rem;
+    z-index: 99;
+
+    @include mediaQuery(xm) {
+      grid-template-columns: 1fr 1fr;
+      margin: 0 auto;
+    }
+
+    @include mediaQuery(s) {
+      width: 100%;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
 
     li a {
       transition: .1s;
@@ -36,6 +61,11 @@
       &:hover {
         transform: scale(1.15);
         background: $cor-2;
+        @include shadow((2px 2px 12px 0 $cor-4-shadow));
+
+        @include mediaQuery(s) {
+          transform: scale(1.05);
+        }
       }
     }
   }

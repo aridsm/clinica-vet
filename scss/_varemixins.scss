@@ -5,10 +5,38 @@ $cor-4: #232018;
 $cor-4-tp: #2320182b;
 $cor-4-shadow: rgba(35, 32, 24, 0.06);
 
-/*
+
 @mixin mediaQuery($size) {
-  @if $size ==
-}*/
+  @if $size ==xl {
+    @media (min-width: 1550px) {
+      @content;
+    }
+  }
+
+  @else if $size ==l {
+    @media (max-width: 1060px) {
+      @content;
+    }
+  }
+
+  @else if $size ==xm {
+    @media (max-width: 860px) {
+      @content;
+    }
+  }
+
+  @else if $size ==m {
+    @media (max-width: 780px) {
+      @content;
+    }
+  }
+
+  @else if $size ==s {
+    @media (max-width: 690px) {
+      @content;
+    }
+  }
+}
 
 
 @mixin shadow($shadow...) {

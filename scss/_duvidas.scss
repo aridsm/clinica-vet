@@ -20,6 +20,11 @@
   .duvidas__container {
     display: flex;
     margin-top: 6rem;
+
+    @include mediaQuery(s) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   .duvidas__form {
@@ -57,7 +62,18 @@
 
         }
       }
+    }
 
+    button {
+      margin-top: -.5rem;
+      display: block;
+      margin-left: auto;
+    }
+
+    @include mediaQuery(s) {
+      margin-right: 0;
+      max-width: 450px;
+      width: 100%;
     }
   }
 
@@ -67,6 +83,12 @@
     height: 1rem;
   }
 
+  address {
+    @include mediaQuery(s) {
+      text-align: center;
+    }
+  }
+
   .duvidas__campo-contato {
     .duvidas__label {
       margin-bottom: .5rem;
@@ -74,6 +96,28 @@
 
     +div {
       margin-top: 2rem;
+    }
+
+    @include mediaQuery(s) {
+      margin-top: 4rem;
+    }
+  }
+
+  .duvidas__redes-sociais {
+    display: flex;
+    align-items: center;
+
+    li+li {
+      margin-left: .5rem;
+    }
+
+    a {
+      width: 1.5rem
+    }
+
+    @include mediaQuery(s) {
+      justify-content: center;
+
     }
   }
 }

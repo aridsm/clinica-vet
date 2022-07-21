@@ -8,16 +8,13 @@
   }
 
   .valores__lista {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 1.5rem;
 
     li {
       display: flex;
-
-      +li {
-        margin-left: 2rem;
-      }
+      align-items: center;
 
       &::before {
         content: '';
@@ -45,6 +42,36 @@
 
         $i: $i + 1
       }
+
+      @include mediaQuery(l) {
+
+        &:nth-of-type(2) {
+          grid-row: 1;
+        }
+      }
+
+      @include mediaQuery(m) {
+        flex-direction: column;
+        align-items: center;
+        max-width: 10rem;
+
+        &::before {
+          margin-right: 0 !important;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    @include mediaQuery(l) {
+      grid-template-columns: repeat(2, auto);
+      grid-gap: 3rem;
+      justify-content: center;
+    }
+
+    @include mediaQuery(m) {
+      grid-template-columns: auto;
+      grid-gap: 4rem;
+      text-align: center;
     }
   }
 }

@@ -2,7 +2,7 @@
   max-width: 900px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 1rem
+  padding: 0 1rem;
 }
 
 .titulo {
@@ -18,6 +18,11 @@ body {
 
 main {
   margin-left: 4rem;
+
+  @include mediaQuery(l) {
+    margin-left: 0;
+    padding-top: 4rem;
+  }
 }
 
 .padding-section {

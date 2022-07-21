@@ -7,6 +7,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include mediaQuery(m) {
+      flex-direction: column;
+    }
   }
 
   .sobre__txts p {
@@ -18,15 +22,26 @@
   .sobre__img {
     position: relative;
     flex: 1;
-    background: url(../assets/blob-2.svg), url(../assets/blob-2.svg), url(../assets/blob-1.svg);
+    background: url(../assets/blob-2.svg), url(../assets/blob-2.svg);
     background-repeat: no-repeat;
-    background-position: center, 6% 20%, 92% 60%;
-    background-size: 20rem, 4rem, 4rem;
+    background-position: center, 6% 20%;
+    background-size: 20rem, 4rem;
+
+    @include mediaQuery(m) {
+      max-width: 400px;
+      background: url(../assets/blob-2.svg) no-repeat center;
+      background-size: 100%;
+    }
 
     img {
       height: 28rem;
       width: auto;
-      margin: -5.5rem auto 0 auto
+      margin: -5.5rem auto 0 auto;
+
+      @include mediaQuery(m) {
+        height: initial;
+        width: 100%;
+      }
     }
   }
 }

@@ -4,6 +4,8 @@ $cor-3: #E1CA53;
 $cor-4: #232018;
 $cor-4-tp: #2320182b;
 $cor-4-shadow: rgba(35, 32, 24, 0.06);
+$cor-4-menu: rgba(35, 32, 24, 0.9);
+$cor-5: #E8E1C0;
 
 
 @mixin mediaQuery($size) {
@@ -14,7 +16,7 @@ $cor-4-shadow: rgba(35, 32, 24, 0.06);
   }
 
   @else if $size ==l {
-    @media (max-width: 1060px) {
+    @media (max-width: 1080px) {
       @content;
     }
   }

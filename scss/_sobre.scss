@@ -1,6 +1,6 @@
 #sobre {
-  background: $cor-4;
-  color: $cor-2;
+  background: $cor-3;
+  color: $cor-4;
   position: relative;
 
   .container {
@@ -22,7 +22,7 @@
   .sobre__img {
     position: relative;
     flex: 1;
-    background: url(../assets/blob-2.svg), url(../assets/blob-2.svg);
+    background: url(../assets/blob-3.svg), url(../assets/blob-3.svg);
     background-repeat: no-repeat;
     background-position: center, 6% 20%;
     background-size: 20rem, 4rem;

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clínica Vet">
     <title>Vet | Página inicial</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +15,7 @@
 
 <body>
     <header id="header">
-        <button type="menu" aria-label="abrir menu" class="header__btn-menu"><img src="./assets/icon-menu.svg" alt=""></button>
+        <button type="button" aria-label="abrir menu" class="header__btn-menu"></button>
         <nav class="header__nav">
             <ul>
                 <li><a href="#">Home</a></li>
@@ -71,7 +72,7 @@
         <section aria-label="valores" id="valores">
             <div class="container">
                 <ul class="valores__lista">
-                    <li>Etiam sed tristique massa</li>
+                    <li data-anima="blob">Etiam sed tristique massa</li>
                     <li>Nulla convallis nisi tellus, cursus mattis</li>
                     <li>Suspendisse aliquam ipsum eget nisi</li>
                     <li>Pellentesque id dignissim lorem</li>
@@ -89,9 +90,9 @@
                     </a>
                 </header>
                 <ul class="especialidades__lista">
-                    <li><a href="#">Clinica Geral</a></li>
+                    <li><a href="#">Clínica Geral</a></li>
                     <li><a href="#">Nefrologia</a></li>
-                    <li><a href="#">Nutriçao</a></li>
+                    <li><a href="#">Nutrição</a></li>
                     <li><a href="#">Endocrinologia</a></li>
                     <li><a href="#">Dermatologia</a></li>
                     <li><a href="#">Oncologia</a></li>
@@ -102,6 +103,7 @@
                     <li><a href="#">Odontologia</a></li>
                 </ul>
             </div>
+            <div class="especialidades__bg-blob"><img src="./assets/blob-2.svg" alt=""></div>
         </section>
         <section aria-label="exames disponiveis" id="exames" class="padding-section">
             <div class="container">
@@ -114,12 +116,12 @@
                     </a>
                 </header>
                 <ul class="exames__lista">
-                    <li><a href="">Exame de sangue</a></li>
-                    <li><a href="">Exame de urina</a></li>
-                    <li><a href="">Ecocardiograma</a></li>
-                    <li><a href="">Ultrassonografia</a></li>
-                    <li><a href="">Radiografia</a></li>
-                    <li><a href="">Pressao arterial</a></li>
+                    <li><a href="#">Exame de sangue</a></li>
+                    <li><a href="#">Exame de urina</a></li>
+                    <li><a href="#">Ecocardiograma</a></li>
+                    <li><a href="#">Ultrassonografia</a></li>
+                    <li><a href="#">Radiografia</a></li>
+                    <li><a href="#">Pressão arterial</a></li>
                 </ul>
             </div>
             <div class="exames__enfeite"></div>
@@ -130,54 +132,86 @@
                     <h2 class="titulo">Conheça nossos profissionais</h2>
                     <p class="padding-txt">Mauris dignissim rhoncus erat</p>
                 </header>
-                <ul class="profissionais__lista">
-                    <li>
-                        <a href="#">
-                            <div class="profissionais__img">
-                                <img src="./assets/pro-1.webp" alt="Victor">
-                            </div>
-                            <div class="profissionais__infos">
-                                <p class="profissionais__nome">Victor</p>
-                                <p>Veterinario</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="profissionais__img">
-                                <img src="./assets/pro-2.webp" alt="Tais">
-                            </div>
-                            <div class="profissionais__infos">
-                                <p class="profissionais__nome">Tais</p>
-                                <p>Veterinaria</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="profissionais__img">
-                                <img src="./assets/pro-3.webp" alt="Bruno">
-                            </div>
-                            <div class="profissionais__infos">
-                                <p class="profissionais__nome">Bruno</p>
-                                <p>Veterinario</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="profissionais__img">
-                                <img src="./assets/pro-4.webp" alt="Amanda">
-                            </div>
-                            <div class="profissionais__infos">
-                                <p class="profissionais__nome">Amanda</p>
-                                <p>Enfermeira</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                <div class="profissionais__container-lista">
+                    <div class="profissionais__btns-lista">
+                        <button type="button" aria-label="mover slide para esquerda"><img src="./assets/seta-left.svg" alt=""></button>
+                        <button type="button" aria-label="mover slide para direita"><img src="./assets/seta-right.svg" alt=""></button>
+                    </div>
+                    <div class="profissionais__container-slide-lista">
 
+                        <ul class="profissionais__lista">
+                            <li>
+                                <a href="#">
+                                    <div class="profissionais__img">
+                                        <img src="./assets/pro-1.webp" alt="Victor">
+                                    </div>
+                                    <div class="profissionais__infos">
+                                        <p class="profissionais__nome">Victor</p>
+                                        <p>Veterinario</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="profissionais__img">
+                                        <img src="./assets/pro-2.webp" alt="Thaís">
+                                    </div>
+                                    <div class="profissionais__infos">
+                                        <p class="profissionais__nome">Thaís</p>
+                                        <p>Veterinaria</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="profissionais__img">
+                                        <img src="./assets/pro-3.webp" alt="Bruno">
+                                    </div>
+                                    <div class="profissionais__infos">
+                                        <p class="profissionais__nome">Bruno</p>
+                                        <p>Veterinario</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="profissionais__img">
+                                        <img src="./assets/pro-4.webp" alt="Amanda">
+                                    </div>
+                                    <div class="profissionais__infos">
+                                        <p class="profissionais__nome">Amanda</p>
+                                        <p>Enfermeira</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="profissionais__img">
+                                        <img src="./assets/pro-5.webp" alt="Maria">
+                                    </div>
+                                    <div class="profissionais__infos">
+                                        <p class="profissionais__nome">Maria</p>
+                                        <p>Veterinaria</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="profissionais__img">
+                                        <img src="./assets/pro-1.webp" alt="Victor">
+                                    </div>
+                                    <div class="profissionais__infos">
+                                        <p class="profissionais__nome">Victor</p>
+                                        <p>Veterinario</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="profissionais__bg-blob"><img src="./assets/blob-1.svg" alt=""></div>
+            <div class="profissionais__bg-linhas"><img src="./assets/linhas.svg" alt=""></div>
         </section>
         <section aria-label="sobre o Vet" id="sobre">
             <div class="container">
@@ -213,7 +247,7 @@
                         </div>
                         <div class="duvidas__campo-form">
                             <label for="mensagem" class="duvidas__label">Mensagem</label>
-                            <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Ola. Gostaria de saber mais sobre..."></textarea>
+                            <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Olá! Gostaria de saber mais sobre..."></textarea>
                         </div>
                         <button type="submit" class="btns btn-fill">
                             <div class="bg-hover"></div>
@@ -252,6 +286,9 @@
                     </address>
                 </div>
             </div>
+            <div class="profissionais__bg-blob-1"><img src="./assets/blob-3.svg" alt=""></div>
+            <div class="profissionais__bg-blob-2"><img src="./assets/blob-2.svg" alt=""></div>
+
         </section>
     </main>
     <footer>

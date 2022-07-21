@@ -1,8 +1,16 @@
 #especialidades {
-  background-image: url('../assets/blob-2.svg');
-  background-repeat: no-repeat;
-  background-size: 20rem;
-  background-position: calc(100% + 8rem) -10rem;
+  position: relative;
+
+  .especialidades__bg-blob {
+    position: absolute;
+    right: -10rem;
+    top: -10rem;
+    z-index: -1;
+
+    img {
+      width: 20rem;
+    }
+  }
 
   .container {
     display: flex;

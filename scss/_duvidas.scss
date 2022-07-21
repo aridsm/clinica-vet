@@ -1,15 +1,32 @@
 #duvidas {
-  background: url(../assets/blob-1.svg), url(../assets/blob-2.svg);
-  background-repeat: no-repeat;
-  background-size: 22rem;
-  background-position: -10rem -10rem, calc(100% + 10rem) calc(100% + 10rem);
+  position: relative;
+
+  .profissionais__bg-blob-1,
+  .profissionais__bg-blob-2 {
+    position: absolute;
+    z-index: -1;
+
+    img {
+      width: 22rem;
+    }
+  }
+
+  .profissionais__bg-blob-1 {
+    top: -10rem;
+    left: -10rem
+  }
+
+  .profissionais__bg-blob-2 {
+    bottom: -10rem;
+    right: -10rem
+  }
 
   header {
     text-align: center;
 
     .titulo {
       position: relative;
-      display: inline-block;
+      display: inline;
 
       &::before {
         @include detailYellow(6rem)

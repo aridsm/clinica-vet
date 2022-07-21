@@ -114,3 +114,17 @@ main {
 ::-webkit-scrollbar-thumb {
   background: $cor-4;
 }
+
+[data-anima] {
+  opacity: 0;
+  transition: .5s;
+}
+
+[data-anima='blob'] {
+  transform: translate3d(-50px, 0, 0);
+}
+
+[data-anima].animated {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}

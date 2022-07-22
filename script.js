@@ -69,3 +69,73 @@ function animateElements() {
 }
 animateElements()
 window.addEventListener('scroll', animateElements)
+
+/* Slide */
+
+const containerSlide = document.querySelector('.profissionais__lista')
+const btnProx = document.querySelector('.btn-prox')
+const btnAnt = document.querySelector('.btn-ant')
+let itemsPerSlide = 4;
+let slideIndex = 0;
+
+function disableOrEnableButton() {
+    btnAnt.classList.remove('disabled');
+    btnProx.classList.remove('disabled');
+    if (slideIndex === 0) {
+        btnAnt.classList.add('disabled')
+    } else if (slideIndex === containerSlide.children.length - itemsPerSlide) {
+        btnProx.classList.add('disabled')
+    }
+}
+
+function moveSlide(width) {
+    containerSlide.style.transform = `translateX(-${width * slideIndex}px)`;
+}
+
+function getMeasuresSlide() {
+
+    if (slideIndex < 0) {
+        slideIndex = 0;
+        return;
+    }
+    if (slideIndex > containerSlide.children.length - itemsPerSlide) {
+        slideIndex = containerSlide.children.length - itemsPerSlide;
+        return;
+    }
+
+    const slideItem = document.querySelectorAll('.profissionais__lista li')[1];
+    const slideItemWidth = slideItem.getBoundingClientRect().width;
+    const slideItemMargin = parseFloat(getComputedStyle(slideItem).marginLeft)
+    const slideDragWidth = slideItemWidth + slideItemMargin;
+    disableOrEnableButton()
+    moveSlide(slideDragWidth)
+}
+/* bug no ultimo slide em telas pequenas */
+function changeSlidesPerPage() {
+    if (window.innerWidth >= 690) {
+        itemsPerSlide = 4
+    } else if (window.innerWidth < 690) {
+        itemsPerSlide = 3
+    } else if (window.innerWidth < 480) {
+        itemsPerSlide = 2
+    } else if (window.innerWidth < 200) {
+        itemsPerSlide = 1
+    }
+    slideIndex = 0;
+    disableOrEnableButton()
+    moveSlide(0)
+}
+changeSlidesPerPage()
+btnProx.addEventListener('click', (e) => {
+    const btnDisabled = e.currentTarget.classList.contains('disabled');
+    if (btnDisabled) return;
+    ++slideIndex;
+    getMeasuresSlide()
+})
+btnAnt.addEventListener('click', (e) => {
+    const btnDisabled = e.currentTarget.classList.contains('disabled');
+    if (btnDisabled) return;
+    --slideIndex;
+    getMeasuresSlide()
+})
+window.addEventListener('resize', changeSlidesPerPage)

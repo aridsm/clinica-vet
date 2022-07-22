@@ -38,7 +38,7 @@
     .profissionais__container-slide-lista {
       overflow: hidden;
       margin-top: 6rem;
-      padding: 2rem 0;
+      padding: 2rem .6rem;
     }
 
     .profissionais__btns-lista {
@@ -50,10 +50,18 @@
         border-radius: 50%;
         @include shadow((0 0 10px 0 $cor-4-tp));
         background: $cor-3;
-        z-index: 99;
+        z-index: 199;
         display: grid;
         place-items: center;
         transition: .1s;
+
+        &.disabled {
+          background: rgb(187, 187, 187);
+
+          &:hover {
+            transform: scale(1);
+          }
+        }
 
         &:hover {
           transform: scale(1.2);
@@ -64,11 +72,11 @@
         }
 
         &:nth-of-type(1) {
-          left: -1.25rem
+          left: -.65rem
         }
 
         &:nth-of-type(2) {
-          right: -1.25rem
+          right: -.65rem
         }
       }
     }
@@ -77,6 +85,7 @@
   .profissionais__lista {
     display: flex;
     justify-content: space-between;
+    transition: .2s;
 
     .profissionais__infos {
       padding: 1.2rem .5rem;
@@ -88,7 +97,7 @@
     }
 
     .profissionais__img {
-      width: 160px;
+      width: 100%;
       overflow: hidden;
       border-bottom-left-radius: 10rem;
       border-bottom-right-radius: 10rem;
@@ -104,34 +113,66 @@
       border: 1px solid $cor-4-tp;
       border-radius: .2rem;
       text-align: center;
+      background: $cor-1;
+      z-index: 99;
       @include shadow((2px 2px 6px 0 $cor-4-shadow));
       transition: .1s;
+      min-width: 23%;
+      position: relative;
+      overflow: hidden;
 
       +li {
-        margin-left: 2rem;
+        margin-left: calc(8% / 3);
       }
 
       &:hover {
         transform: scale(1.1);
       }
+
+      a {
+        position: relative;
+        width: 100%;
+
+        .profissionais__item-bg {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 20%;
+          background: $cor-4-menu;
+          color: $cor-2;
+          display: grid;
+          place-items: center;
+          transform: translateY(101%);
+          transition: .4s;
+
+        }
+
+        &:hover {
+          .profissionais__item-bg {
+            transform: translateY(0);
+          }
+        }
+      }
+
+      @include mediaQuery(s) {
+        min-width: 30%;
+
+        +li {
+          margin-left: 5%;
+        }
+      }
+
+      @include mediaQuery(ms) {
+        min-width: 47%;
+
+        +li {
+          margin-left: 6%;
+        }
+      }
+
+      @include mediaQuery(xs) {
+        min-width: 100%;
+      }
     }
   }
 }
-
-/* 
-  mask-repeat: no-repeat;
-      -webkit-mask-repeat: no-repeat;
-      mask-position: center;
-      -webkit-mask-position: center;
-      mask-size: 158px;
-      -webkit-mask-size: 158px;
-$i: 1;
-
-      @while $i < 5 {
-        &:nth-of-type(#{$i}) .profissionais__img {
-          mask-image: url(../assets/pro-bg-#{$i}.svg);
-          -webkit-mask-image: url(../assets/pro-bg-#{$i}.svg);
-        }
-
-        $i: $i + 1
-      }*/

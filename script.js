@@ -57,8 +57,11 @@ function animateElements() {
 
     animaElements.forEach(element => {
         const DISTANCE_ELEMENT_TOP = element.getBoundingClientRect().top + window.pageYOffset;
+        const delay = element.dataset.delay || 0;
         if (DISTANCE_WINDOW_TOP > DISTANCE_ELEMENT_TOP) {
-            element.classList.add('animated')
+            setTimeout(() => {
+                element.classList.add('animated')
+            }, delay);
         } else if (DISTANCE_WINDOW_TOP < DISTANCE_ELEMENT_TOP + element.offsetHeight) {
             element.classList.remove('animated')
         }

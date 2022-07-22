@@ -10,8 +10,8 @@
     padding-top: 2.2rem;
     padding-bottom: 2.2rem;
     max-width: 1080px;
-    height: 100vh;
-    max-height: 820px;
+    min-height: 100vh;
+    height: 100%;
     display: grid;
     grid-template-columns: minmax(max-content, auto) minmax(400px, 650px) auto;
     grid-gap: 1.5rem;
@@ -34,6 +34,7 @@
 
   .entrada__textos {
     grid-column: 1;
+    padding: 2rem 0;
 
     h1 {
       position: relative;
@@ -101,7 +102,7 @@
         bottom: 0;
         right: 2rem;
         position: relative;
-        transform: scale(1.15);
+        transform: scale(1.05);
       }
 
       @include mediaQuery(m) {
@@ -124,7 +125,7 @@
       transform: scale(1.2) translateY(-5vw) translateX(1vw);
 
       @include mediaQuery(l) {
-        transform: scale(1) translateX(-2vw);
+        transform: scale(.8) translateX(-2vw);
       }
     }
 
@@ -139,7 +140,7 @@
 
   .entrada__endereco {
     position: absolute;
-    left: 35%;
+    left: 25vw;
     width: 13rem;
     text-align: right;
     display: grid;
@@ -157,6 +158,15 @@
       text-align: center;
       margin: auto;
       margin-left: .8rem;
+    }
+
+    @include mediaQuery(l) {
+      left: calc(50% - 6.5rem);
+    }
+
+    @include mediaQuery(ms) {
+      left: initial;
+      right: 0
     }
   }
 
@@ -211,6 +221,12 @@
     background-repeat: no-repeat;
     background-position: 25% top, top right, 27% 100%;
     background-size: auto;
+  }
 
+  @include mediaQuery(ms) {
+    background: url('../assets/blob-5.svg'), url('../assets/linhas-2.svg');
+    background-repeat: no-repeat;
+    background-position: 25% top, 27% 100%;
+    background-size: auto;
   }
 }

@@ -13,7 +13,13 @@
 
   .profissionais__bg-blob-1 {
     top: -10rem;
-    left: -10rem
+    left: -10rem;
+
+    @include mediaQuery(xm) {
+      img {
+        width: 18.5rem;
+      }
+    }
   }
 
   .profissionais__bg-blob-2 {

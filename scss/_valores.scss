@@ -37,7 +37,7 @@
 
       @while $i < 5 {
         &:nth-of-type(#{$i})::before {
-          background-image: url('../assets/icon-ca-#{$i}.png');
+          background-image: url('../assets/icon-ca-#{$i}.webp');
         }
 
         $i: $i + 1

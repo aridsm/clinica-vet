@@ -10,7 +10,7 @@ $cor-5: #E8E1C0;
 
 @mixin mediaQuery($size) {
   @if $size ==xl {
-    @media (min-width: 1550px) {
+    @media (min-width: 1400px) {
       @content;
     }
   }
@@ -41,6 +41,12 @@ $cor-5: #E8E1C0;
 
   @else if $size ==xs {
     @media (max-width: 400px) {
+      @content;
+    }
+  }
+
+  @else if $size ==ms {
+    @media (max-width: 480px) {
       @content;
     }
   }

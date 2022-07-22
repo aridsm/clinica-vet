@@ -3,7 +3,7 @@
   position: fixed;
   width: 4rem;
   min-height: 100vh;
-  @include shadow(1px 0 15px 0 $cor-4-tp);
+  @include shadow(1px 1px 15px 0 $cor-4-tp);
   padding: 2rem 0.5rem;
   display: flex;
   flex-direction: column;
@@ -17,6 +17,9 @@
     width: 100%;
     min-height: initial;
     height: 4rem;
+    border-right: none;
+    border-bottom: 1px solid $cor-4-tp;
+
   }
 
   ;
@@ -30,6 +33,12 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: .5rem;
+    border-radius: 50%;
+    transition: .1s;
+
+    &:hover {
+      background-color: $cor-4-shadow;
+    }
 
     &.ativo {
       background-image: url('../assets/x-lg.svg');
@@ -81,7 +90,7 @@
     }
 
     @include mediaQuery(l) {
-      width: calc(100% + 1px);
+      width: 100%;
       left: 0;
       top: 4rem;
 

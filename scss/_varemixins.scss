@@ -38,6 +38,12 @@ $cor-5: #E8E1C0;
       @content;
     }
   }
+
+  @else if $size ==xs {
+    @media (max-width: 400px) {
+      @content;
+    }
+  }
 }
 
 

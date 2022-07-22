@@ -62,12 +62,14 @@
   }
 
   .exames__enfeite {
-    background-image: url('../assets/linhas.svg');
-    width: 18rem;
-    height: 18rem;
     position: absolute;
-    transform: rotate(90deg);
     top: -9rem;
-    left: -9rem
+    left: -9rem;
+
+    img {
+      transform: rotate(90deg);
+      width: 18rem;
+      height: 18rem;
+    }
   }
 }

@@ -37,7 +37,7 @@
         <section aria-label="entrada" id="entrada">
             <div class="entrada__container">
                 <span class="titulo">Vet</span>
-                <div class="entrada__textos">
+                <div class="entrada__textos" data-anima="translate-up">
                     <h1 class="titulo">Curabitur feugiat<br> mi vitae <span>eleifend</span> <br> pharetra.</h1>
                     <p class="entrada__paragrafo">Mauris justo urna, maximus quis eros<br> vel, blandit pellentesque purus</p>
                     <div class="entrada__btns">
@@ -51,13 +51,13 @@
                         </a>
                     </div>
                 </div>
-                <div class="entrada__img"><img src="./assets/img-entrada.png" alt="gato amarelo listrado"></div>
+                <div class="entrada__img" data-anima="translate-left"><img src="./assets/img-entrada.png" alt="gato amarelo listrado"></div>
                 <address aria-label="endereço" class="entrada__endereco">
                     <span>Rua Lorem 123 - Ipsum</span>
                     <span>Cidade - XX</span>
                 </address>
                 <div aria-label="horario de funcionamento" class="entrada__funcionamento">
-                    <p class="entrada__aberto-fechado">Aberto agora</p>
+                    <p class="entrada__aberto-fechado"></p>
                     <div>
                         <p>Segunda a sexta</p>
                         <p><time datetime="08:00">8h:00</time> às <time datetime="21:00">21h:00</time></p>
@@ -72,7 +72,7 @@
         <section aria-label="valores" id="valores">
             <div class="container">
                 <ul class="valores__lista">
-                    <li data-anima="blob">Etiam sed tristique massa</li>
+                    <li data-anima="left">Etiam sed tristique massa</li>
                     <li>Nulla convallis nisi tellus, cursus mattis</li>
                     <li>Suspendisse aliquam ipsum eget nisi</li>
                     <li>Pellentesque id dignissim lorem</li>
@@ -81,7 +81,7 @@
         </section>
         <section aria-label="especialidades médicas" id="especialidades" class="padding-section">
             <div class="container">
-                <header class="especialidades__header">
+                <header class="especialidades__header" data-anima="left">
                     <h2 class="titulo especialidades__titulo">Especialidades</h2>
                     <p class="padding-txt">Donec viverra mauris quis<br> elementum laoreet</p>
                     <a href="#" class="btns btn-fill">
@@ -103,11 +103,11 @@
                     <li><a href="#">Odontologia</a></li>
                 </ul>
             </div>
-            <div class="especialidades__bg-blob"><img src="./assets/blob-2.svg" alt=""></div>
+            <div class="especialidades__bg-blob" data-anima="translate-right"><img src="./assets/blob-2.svg" alt=""></div>
         </section>
         <section aria-label="exames disponiveis" id="exames" class="padding-section">
             <div class="container">
-                <header class="exames__header">
+                <header class="exames__header" data-anima="right">
                     <h2 class="titulo">Exames</h2>
                     <p class="padding-txt">Donec viverra mauris quis<br> elementum laoreet</p>
                     <a href="#" class="btns btn-border">
@@ -124,7 +124,7 @@
                     <li><a href="#">Pressão arterial</a></li>
                 </ul>
             </div>
-            <div class="exames__enfeite"></div>
+            <div class="exames__enfeite" data-anima="left"><img src="./assets/linhas.svg" alt=""></div>
         </section>
         <section aria-label="nossos profissionais" id="profissionais" class="padding-section">
             <div class="container">
@@ -210,17 +210,17 @@
                     </div>
                 </div>
             </div>
-            <div class="profissionais__bg-blob"><img src="./assets/blob-1.svg" alt=""></div>
-            <div class="profissionais__bg-linhas"><img src="./assets/linhas.svg" alt=""></div>
+            <div class="profissionais__bg-blob" data-anima="translate-left"><img src="./assets/blob-1.svg" alt=""></div>
+            <div class="profissionais__bg-linhas" data-anima="translate-bottom"><img src="./assets/linhas.svg" alt=""></div>
         </section>
         <section aria-label="sobre o Vet" id="sobre">
             <div class="container">
-                <div class="sobre__txts padding-section">
+                <div class="sobre__txts padding-section" data-anima="left">
                     <h2 class="titulo">Sobre o Vet</h2>
                     <p>Nunc blandit nisl sit amet nibh fermentum interdum. Ut sagittis feugiat dignissim. Proin tellus nisi, gravida vehicula sapien a, cursus auctor lorem. Integer mattis urna sem, eu congue est sagittis.
                     </p>
                 </div>
-                <div class="sobre__img">
+                <div class="sobre__img" data-anima="translate-up">
                     <img src="./assets/img-sobre.png" alt="gato branco e preto bocejando">
                 </div>
             </div>
@@ -286,9 +286,8 @@
                     </address>
                 </div>
             </div>
-            <div class="profissionais__bg-blob-1"><img src="./assets/blob-3.svg" alt=""></div>
-            <div class="profissionais__bg-blob-2"><img src="./assets/blob-2.svg" alt=""></div>
-
+            <div class="profissionais__bg-blob-1" data-anima="translate-left"><img src="./assets/blob-3.svg" alt=""></div>
+            <div class="profissionais__bg-blob-2" data-anima="translate-bottom"><img src="./assets/blob-2.svg" alt=""></div>
         </section>
     </main>
     <footer>

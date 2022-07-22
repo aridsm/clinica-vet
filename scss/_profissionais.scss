@@ -1,11 +1,8 @@
 #profissionais {
   text-align: center;
-  // background-image: url(../assets/blob-1.svg), url(../assets/linhas.svg);
-  // background-repeat: no-repeat;
-  ///  background-size: 20rem;
-  // background-position: -10rem -10rem, calc(100% + 10rem) calc(100% + 10rem);
   padding-bottom: 8rem;
   position: relative;
+  overflow: hidden;
 
   .profissionais__bg-blob,
   .profissionais__bg-linhas {

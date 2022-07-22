@@ -1,36 +1,37 @@
-/*function funcionamento() {
-    const aberto = document.querySelector('.aberto')
-    setInterval(horarioFuncionamento, 1000)
+function funcionamento() {
+    const aberto = document.querySelector('.entrada__aberto-fechado')
+    setInterval(horarioFuncionamento, 5000)
+
     function horarioFuncionamento() {
         const date = new Date()
         const d = date.getDay()
         const hUtc = date.getUTCHours()
         const horaAgora = hUtc - 3
+
         if (horaAgora >= 8) {
             if ((d == 6 || d == 0) && horaAgora < 16) {
-                styleAberto('Aberto agora', 'open', 'fechado')
+                styleAberto('Aberto agora', 'aberto')
             }
             else if ((d !== 6 && d !== 0) && horaAgora < 21) {
-                styleAberto('Aberto agora', 'open', 'fechado')
+                styleAberto('Aberto agora', 'aberto')
             }
             else {
-                styleAberto('Fechado agora', 'fechado', 'open')
+                styleAberto('Fechado agora')
             }
         } else {
-            styleAberto('Fechado agora', 'fechado', 'open')
+            styleAberto('Fechado agora')
         }
 
     }
-    function styleAberto(frase, classe, remover) {
+    function styleAberto(frase, classe = '') {
         aberto.textContent = frase;
-        aberto.classList.remove(remover)
         aberto.classList.add(classe)
     }
     horarioFuncionamento()
 }
 
-funcioamento()
-*/
+funcionamento()
+
 const headerMenu = document.querySelector('.header__btn-menu')
 const nav = document.querySelector('.header__nav')
 
@@ -52,11 +53,13 @@ window.addEventListener('scroll', closeMenu)
 const animaElements = document.querySelectorAll('[data-anima]')
 
 function animateElements() {
-    const DISTANCE_WINDOW_TOP = window.pageYOffset + window.innerHeight * 3 / 4;
+    const DISTANCE_WINDOW_TOP = window.pageYOffset + window.innerHeight * 4 / 5;
+
     animaElements.forEach(element => {
-        if (DISTANCE_WINDOW_TOP > element.offsetTop) {
+        const DISTANCE_ELEMENT_TOP = element.getBoundingClientRect().top + window.pageYOffset;
+        if (DISTANCE_WINDOW_TOP > DISTANCE_ELEMENT_TOP) {
             element.classList.add('animated')
-        } else {
+        } else if (DISTANCE_WINDOW_TOP < DISTANCE_ELEMENT_TOP + element.offsetHeight) {
             element.classList.remove('animated')
         }
     })

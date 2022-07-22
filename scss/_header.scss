@@ -46,7 +46,7 @@
     place-items: center;
     position: absolute;
     background: $cor-4-menu;
-    width: calc(100vw - 4rem);
+    width: calc(100vw - 4rem - 10px);
     min-height: 100vh;
     left: 4rem;
     top: 0;
@@ -81,7 +81,7 @@
     }
 
     @include mediaQuery(l) {
-      width: 100vw;
+      width: calc(100% + 1px);
       left: 0;
       top: 4rem;
 

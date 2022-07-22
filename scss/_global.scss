@@ -7,13 +7,21 @@
 
 .titulo {
   font-size: 2.25rem;
+
+  @include mediaQuery(xs) {
+    font-size: 1.75rem;
+  }
 }
 
 body {
   font-family: 'Lora', serif;
   background: $cor-1;
   font-size: 15px;
-  color: $cor-4
+  color: $cor-4;
+
+  @include mediaQuery(xs) {
+    font-size: 13px;
+  }
 }
 
 main {
@@ -48,6 +56,10 @@ main {
     border-radius: .2rem;
     padding: .9rem 1.6rem;
     overflow: hidden;
+
+    @include mediaQuery(xs) {
+      padding: .8rem 1.2rem;
+    }
   }
 
   &:hover .bg-hover {
@@ -116,15 +128,36 @@ main {
 }
 
 [data-anima] {
-  opacity: 0;
   transition: .5s;
 }
 
-[data-anima='blob'] {
-  transform: translate3d(-50px, 0, 0);
+[data-anima="left"] {
+  opacity: 0;
+  transform: translate3d(-70px, 0, 0);
+}
+
+[data-anima="right"] {
+  opacity: 0;
+  transform: translate3d(70px, 0, 0);
+}
+
+[data-anima="translate-up"] {
+  transform: translate3d(0, 70px, 0);
+}
+
+[data-anima="translate-right"] {
+  transform: translate3d(-70px, 70px, 0) scale(1.4);
+}
+
+[data-anima="translate-left"] {
+  transform: translate3d(70px, 70px, 0) scale(1.4);
+}
+
+[data-anima="translate-bottom"] {
+  transform: translate3d(-70px, -70px, 0) scale(1.4);
 }
 
 [data-anima].animated {
   opacity: 1;
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0) scale(1);
 }

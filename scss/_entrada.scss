@@ -196,11 +196,11 @@
         left: -5px
       }
 
-      &.aberto::before {
+      &[data-open="aberto"]::before {
         background-color: lime;
       }
 
-      &.fechado::before {
+      &[data-open="fechado"]::before {
         background-color: rgb(255, 30, 0);
       }
     }

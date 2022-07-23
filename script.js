@@ -1,6 +1,6 @@
 function funcionamento() {
     const aberto = document.querySelector('.entrada__aberto-fechado')
-    setInterval(horarioFuncionamento, 5000)
+    setInterval(horarioFuncionamento, 1000)
 
     function horarioFuncionamento() {
         const date = new Date()
@@ -16,16 +16,16 @@ function funcionamento() {
                 styleAberto('Aberto agora', 'aberto')
             }
             else {
-                styleAberto('Fechado agora')
+                styleAberto('Fechado agora', 'fechado')
             }
         } else {
-            styleAberto('Fechado agora')
+            styleAberto('Fechado agora', 'fechado')
         }
 
     }
-    function styleAberto(frase, classe = '') {
-        aberto.textContent = frase;
-        aberto.classList.add(classe)
+    function styleAberto(txt, dataType) {
+        aberto.textContent = txt;
+        aberto.dataset.open = dataType;
     }
     horarioFuncionamento()
 }
@@ -93,16 +93,6 @@ function moveSlide(width) {
 }
 
 function getMeasuresSlide() {
-
-    if (slideIndex < 0) {
-        slideIndex = 0;
-        return;
-    }
-    if (slideIndex > containerSlide.children.length - itemsPerSlide) {
-        slideIndex = containerSlide.children.length - itemsPerSlide;
-        return;
-    }
-
     const slideItem = document.querySelectorAll('.profissionais__lista li')[1];
     const slideItemWidth = slideItem.getBoundingClientRect().width;
     const slideItemMargin = parseFloat(getComputedStyle(slideItem).marginLeft)
@@ -110,20 +100,23 @@ function getMeasuresSlide() {
     disableOrEnableButton()
     moveSlide(slideDragWidth)
 }
-/* bug no ultimo slide em telas pequenas */
+
 function changeSlidesPerPage() {
     if (window.innerWidth >= 690) {
         itemsPerSlide = 4
-    } else if (window.innerWidth < 690) {
+    }
+    if (window.innerWidth < 690) {
         itemsPerSlide = 3
-    } else if (window.innerWidth < 480) {
+    }
+    if (window.innerWidth < 480) {
         itemsPerSlide = 2
-    } else if (window.innerWidth < 200) {
+    }
+    if (window.innerWidth < 400) {
         itemsPerSlide = 1
     }
     slideIndex = 0;
     disableOrEnableButton()
-    moveSlide(0)
+    moveSlide(0);
 }
 changeSlidesPerPage()
 btnProx.addEventListener('click', (e) => {

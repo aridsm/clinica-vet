@@ -50,6 +50,12 @@ $cor-5: #E8E1C0;
       @content;
     }
   }
+
+  @else if $size ==l-height {
+    @media (min-height: 850px) and (min-width: 1500px) {
+      @content;
+    }
+  }
 }
 
 

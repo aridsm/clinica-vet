@@ -11,17 +11,17 @@
     padding-bottom: 2.2rem;
     max-width: 1080px;
     min-height: 100vh;
-    height: 100%;
     display: grid;
     grid-template-columns: minmax(max-content, auto) minmax(400px, 650px) auto;
     grid-gap: 1.5rem;
 
     @include mediaQuery(xl) {
-      max-width: 1300px;
+      max-width: 1350px;
     }
 
     @include mediaQuery(l) {
       grid-template-columns: minmax(max-content, auto) minmax(400px, 650px);
+      min-height: auto;
     }
 
     @include mediaQuery(m) {
@@ -29,6 +29,10 @@
       height: initial;
       max-height: 100%;
       grid-gap: 3rem
+    }
+
+    @include mediaQuery(l-height) {
+      min-height: 850px;
     }
   }
 

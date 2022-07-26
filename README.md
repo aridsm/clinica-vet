@@ -1,16 +1,8 @@
 # Projeto clínica veterinária 🐶
 
-Design de landing page de uma clínica veterinária fictícia. 
+![página](https://github.com/aridsm/clinica-vet/blob/main/Vet%20_%20P%C3%A1gina%20inicial.gif)
 
-## Conta com:
+Landing page de uma clínica veterinária fictícia feito com HTML, JavaScript e Sass, com seções de especialidades, exames, contato, profissionais etc.  
+O projeto inclui horário de funcionamento em tempo real, slide de múltiplos itens, animação ao scroll e mais.
 
-- Seção de especialidades;
-- Botões de agendamento de visitas e resultados de exames;
-- Seção de exames;
-- Seção sobre a clínica;
-- Formulário para mensagens;
-- Horários de funcionamento.
-
-Link: https://aridsm.github.io/clinica-vet/
-
-![página](https://github.com/aridsm/Vet-redesign/blob/main/page.png)
+Acesse o site: https://aridsm.github.io/clinica-vet/
